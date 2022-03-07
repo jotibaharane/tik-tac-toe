@@ -1,12 +1,11 @@
-import React, { useRef } from 'react'
+import React from 'react'
 function Component(props) {
-    const ref=useRef(null)
-    const {count,displayCount}=props;
+  const {count,displayCount}=props
   return (
-    <div className="sub-comp" id='ref' ref={ref} onClick={()=>displayCount(ref)}>
-    {count}    
+    <div className="sub-comp" id='count.id' onClick={()=>displayCount(count.id)}>
+    {count.value}    
        </div>
   )
-}
+  }
 
 export default Component
